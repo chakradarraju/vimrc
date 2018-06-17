@@ -11,32 +11,19 @@ set incsearch
 map <C-X> :q<CR>
 
 " switch on linenumber by default
-set relativenumber
+set nu
 " F5 for toggling linenumber
-nmap <F5> :set relativenumber!<CR>
+nmap <F5> :set nu!<CR>
 
 " F4 for toggling search highlight
 nmap <F4> :set hls!<CR>
 
 " MRU
-nnoremap <F8> :MRU<CR>
+nnoremap <C-O> :MRU<CR>
 " Don't open a stupid new buffer
 let MRU_Use_Current_Window = 1
 " Fix for MRU window filetype unknown error when syntax=on
 au BufNewFile,BufRead __MRU_Files__ set filetype=mru
-
-
-" NERDTree plugin
-nnoremap <F10> :NERDTree<CR>
-
-" Fuf plugin
-nnoremap <F9> :FufFile<CR>
-
-" Open file under cursor
-nnoremap <F7> <C-W>f
-
-" Rotate windows
-nnoremap <C-P> <C-W><C-X>
 
 " Making horizontal
 nnoremap <C-U> <C-W>t<C-W>K
@@ -107,3 +94,5 @@ au BufLeave * setlocal syntax=off
 nnoremap <C-F12> :source $MYVIMRC<CR>
 
 nnoremap ; :
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
