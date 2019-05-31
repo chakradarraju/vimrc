@@ -7,6 +7,9 @@ set hls
 set ic
 set incsearch
 
+" Ctrl-N for counting number of matches
+map <C-H> :%s///gn<CR>
+
 " Ctrl-X for close buffer
 map <C-X> :q<CR>
 
@@ -95,4 +98,5 @@ nnoremap <C-F12> :source $MYVIMRC<CR>
 
 nnoremap ; :
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
